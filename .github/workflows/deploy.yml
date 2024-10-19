@@ -2,30 +2,29 @@ name: Deploy Vue.js app to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    strategy:
+      matrix:
+        node-version: [22.x]
 
-    - name: Setup Node.js
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
-
-    - name: Install pnpm
-      run: npm install -g pnpm
-
-    - name: Install dependencies
-      run: pnpm install
-
-    - name: Build project
-      run: pnpm run build
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+     
+    - run: npm install -g pnpm
+    - run: pnpm install
+    - run: pnpm run build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
