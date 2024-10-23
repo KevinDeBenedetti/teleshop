@@ -21,7 +21,7 @@ const items = ref<MenuItem[]>([]);
 
 const loadProducts = async () => {
     try {
-        const response = await fetch("/content/products.json");
+        const response = await fetch("/teleshop/content/products.json");
         const products = await response.json();
 
         const productItems: MenuItem[] = products.map((product: Product) => ({
