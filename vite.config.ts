@@ -9,7 +9,7 @@ import {PrimeVueResolver} from '@primevue/auto-import-resolver';
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: '/teleshop/',
+  base: '/teleshop/',
   plugins: [
     vue(),
     vueDevTools(),
