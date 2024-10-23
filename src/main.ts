@@ -10,12 +10,8 @@ import 'primeicons/primeicons.css';
 
 import App from './App.vue';
 import router from './router';
-// Telegram Mini App
-// import { init } from '@telegram-apps/sdk-vue';
-// init()
 
 const app = createApp(App);
-
 // Primevue
 app.use(PrimeVue, {
     theme: {
