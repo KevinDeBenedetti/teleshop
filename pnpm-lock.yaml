@@ -11,6 +11,9 @@ importers:
       '@primevue/themes':
         specifier: ^4.1.1
         version: 4.1.1
+      '@telegram-apps/sdk-vue':
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.5.12(typescript@5.5.4))
       pinia:
         specifier: ^2.2.4
         version: 2.2.4(typescript@5.5.4)(vue@3.5.12(typescript@5.5.4))
@@ -611,6 +614,32 @@ packages:
     resolution: {integrity: sha512-fbMkAF7fufku0N2dE5TBXcNlg0pt0cJue4xBRE2Qc5Vqikxr4VCgKj/ht6SMdFcOacVA9rqF70APJ8RN/4vMJw==}
     cpu: [x64]
     os: [win32]
+
+  '@telegram-apps/bridge@1.3.0':
+    resolution: {integrity: sha512-9P2SEhr1SSo8JQsbfm4fIzYhZY0wwH6PEOmSZ0kNXZ4xX1iSftJ3T7kSbcaQL2zIVrKO8PJxKeH4Etmkk9Oqgg==}
+
+  '@telegram-apps/navigation@1.0.4':
+    resolution: {integrity: sha512-I+wwfhR7O29ofzJ+x4HzErDbvYGjXlJaeaTxwYLCvcS014pv4+5ijbfKSBAmNIxWZC+s97+WzTD86jeze79K3w==}
+
+  '@telegram-apps/sdk-vue@1.0.1':
+    resolution: {integrity: sha512-6G052bAcDUOffwyVmTuiwH9Yj1vBclcZEVzsqPllqdkFoMJXrMzvV/jb/m48aQxe1Gk0jOm8diHKGHZQqFJ6nA==}
+    peerDependencies:
+      vue: ^3.0.0
+
+  '@telegram-apps/sdk@2.5.2':
+    resolution: {integrity: sha512-LlK07tFeL4QNJt/5dO/yh7ilWuqr3ja+Nr9xnDvQsxO7NroldC7moEqAzGnTq8Fu7mu1WFf/UMkmZnOMkK8OWw==}
+
+  '@telegram-apps/signals@1.0.1':
+    resolution: {integrity: sha512-+DAltcPtLBeNPjX+BxEh9smh0cbxCXuEcsOEyDCovp6HJHusWFv1tDyJuV0/rXFmcDs+VwU7SjmINdjld2nFHw==}
+
+  '@telegram-apps/toolkit@1.0.0':
+    resolution: {integrity: sha512-fSVoveLuMzwRKWeXEufMSXxH+HvjsFKb1DeT3pG5qLpnb2rdtejnNcwAt6WEPtiZ3a4YntYaFuR3KYgVv0ZxeQ==}
+
+  '@telegram-apps/transformers@1.0.1':
+    resolution: {integrity: sha512-SsI+FhCOkkZFUPqr+ib11Fi25fRCpdMsI2Flp51NrdtKaPDnKFkBBG4GcSEaGL8sXquW9uAANjc499jSaZK5jQ==}
+
+  '@telegram-apps/types@1.0.1':
+    resolution: {integrity: sha512-8tGy1zG/1MEt0KF8nR0ffZ93whKveEJIkBI+qxHCRgatKwKVJV2dVSXrrBspFKn7FIIo1/CvmB8zP4vKPzglbg==}
 
   '@tsconfig/node20@20.1.4':
     resolution: {integrity: sha512-sqgsT69YFeLWf5NtJ4Xq/xAF8p4ZQHlmGW74Nu2tD4+g5fAsposc4ZfaaPixVu4y01BEiDCWLRDCvDM5JOsRxg==}
@@ -2767,6 +2796,42 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.24.0':
     optional: true
+
+  '@telegram-apps/bridge@1.3.0':
+    dependencies:
+      '@telegram-apps/signals': 1.0.1
+      '@telegram-apps/toolkit': 1.0.0
+      '@telegram-apps/transformers': 1.0.1
+      '@telegram-apps/types': 1.0.1
+
+  '@telegram-apps/navigation@1.0.4':
+    dependencies:
+      '@telegram-apps/bridge': 1.3.0
+      '@telegram-apps/signals': 1.0.1
+      '@telegram-apps/toolkit': 1.0.0
+
+  '@telegram-apps/sdk-vue@1.0.1(vue@3.5.12(typescript@5.5.4))':
+    dependencies:
+      '@telegram-apps/sdk': 2.5.2
+      vue: 3.5.12(typescript@5.5.4)
+
+  '@telegram-apps/sdk@2.5.2':
+    dependencies:
+      '@telegram-apps/bridge': 1.3.0
+      '@telegram-apps/navigation': 1.0.4
+      '@telegram-apps/signals': 1.0.1
+      '@telegram-apps/transformers': 1.0.1
+
+  '@telegram-apps/signals@1.0.1': {}
+
+  '@telegram-apps/toolkit@1.0.0': {}
+
+  '@telegram-apps/transformers@1.0.1':
+    dependencies:
+      '@telegram-apps/toolkit': 1.0.0
+      '@telegram-apps/types': 1.0.1
+
+  '@telegram-apps/types@1.0.1': {}
 
   '@tsconfig/node20@20.1.4': {}
 
