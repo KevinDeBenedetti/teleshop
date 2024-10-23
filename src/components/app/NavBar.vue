@@ -27,7 +27,7 @@ const loadProducts = async () => {
         const productItems: MenuItem[] = products.map((product: Product) => ({
             label: product.name,
             command: () => {
-                router.push('/teleshop' + product.route);
+                router.push(product.route);
             }
         }));
 
