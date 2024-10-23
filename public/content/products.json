@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Fruits",
+        "route": "/product/fruits",
+        "description": "Fresh and organic fruits from local farms."
+    },
+    {
+        "id": "2",
+        "name": "Vegetables",
+        "route": "/product/vegetables",
+        "description": "Organic and fresh vegetables, rich in nutrients."
+    },
+    {
+        "id": "3",
+        "name": "Drinks",
+        "route": "/product/drinks",
+        "description": "Refreshing drinks including juices, sodas, and more."
+    },
+    {
+        "id": "4",
+        "name": "Dairy",
+        "route": "/product/dairy",
+        "description": "Dairy products such as milk, cheese, and yogurt."
+    },
+    {
+        "id": "5",
+        "name": "Snacks",
+        "route": "/product/snacks",
+        "description": "A variety of snacks including chips, nuts, and granola."
+    },
+    {
+        "id": "6",
+        "name": "Bakery",
+        "route": "/product/bakery",
+        "description": "Freshly baked bread, pastries, and cakes."
+    }
+]
