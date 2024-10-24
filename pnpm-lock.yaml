@@ -14,6 +14,9 @@ importers:
       '@telegram-apps/sdk-vue':
         specifier: ^1.0.1
         version: 1.0.1(vue@3.5.12(typescript@5.5.4))
+      eruda:
+        specifier: ^3.4.0
+        version: 3.4.0
       pinia:
         specifier: ^2.2.4
         version: 2.2.4(typescript@5.5.4)(vue@3.5.12(typescript@5.5.4))
@@ -1134,6 +1137,9 @@ packages:
 
   error-stack-parser-es@0.1.5:
     resolution: {integrity: sha512-xHku1X40RO+fO8yJ8Wh2f2rZWVjqyhb1zgq1yZ8aZRQkv6OOKhKWRUaht3eSCUbAOBaKIgM+ykwFLE+QUxgGeg==}
+
+  eruda@3.4.0:
+    resolution: {integrity: sha512-MSPJUwdKX8gJuWXzlKN0YcZUm8+XAMtntW+tmnvEpb1hUVQRxMiB/lxrqkuOBQ/SQJRXpIP1E0cADsRZMDjpXg==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -3391,6 +3397,8 @@ snapshots:
   entities@4.5.0: {}
 
   error-stack-parser-es@0.1.5: {}
+
+  eruda@3.4.0: {}
 
   esbuild@0.21.5:
     optionalDependencies:

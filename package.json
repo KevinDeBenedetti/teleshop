@@ -16,6 +16,7 @@
   "dependencies": {
     "@primevue/themes": "^4.1.1",
     "@telegram-apps/sdk-vue": "^1.0.1",
+    "eruda": "^3.4.0",
     "pinia": "^2.2.4",
     "primeicons": "^7.0.0",
     "primevue": "^4.1.1",
