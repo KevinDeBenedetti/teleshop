@@ -32,12 +32,18 @@ const loadProducts = async () => {
         }));
 
         items.value = [
-            {
-                icon: 'pi pi-home',
-                command: () => {
-                    router.push('/');
-                }            
-            },
+            // {
+            //     icon: 'pi pi-arrow-left',
+            //     command: () => {
+            //         router.back();
+            //     } 
+            // },
+            // {
+            //     icon: 'pi pi-home',
+            //     command: () => {
+            //         router.push('/');
+            //     }            
+            // },
             {
                 label: 'Products',
                 items: productItems
@@ -52,10 +58,28 @@ const loadProducts = async () => {
 onMounted(() => {
     loadProducts();
 });
+
+const onReturn = () => {
+    router.back();
+}
 </script>
 
 <template>
   <header class="px-4 pt-2">        
-    <Menubar breakpoint="245px" :model="items" />
+    <Menubar breakpoint="245px" :model="items">
+        <template #start>
+            <div class="mr-8">
+                <Button icon="pi pi-arrow-left" text @click="onReturn" />
+                <RouterLink to="/" >
+                    <Button icon="pi pi-home" text />
+                </RouterLink>
+            </div>
+        </template>
+        <template #end>
+            <RouterLink to="/" >
+                <Button icon="pi pi-user" text />
+            </RouterLink>
+        </template>
+    </Menubar>
   </header>
 </template>

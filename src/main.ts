@@ -10,21 +10,6 @@ import 'primeicons/primeicons.css';
 
 // Telegram
 import { init } from '@telegram-apps/sdk-vue';
-// Verify Telegram environment is available
-function isTelegramEnvironment() {
-    return typeof window !== 'undefined' && window.Telegram !== undefined && window.Telegram.WebApp !== undefined;
-}
-// Init SDK only if it's a Telegram environment
-if (isTelegramEnvironment()) {
-    try {
-        init();
-        console.log('Telegram SDK initialized');
-    } catch (error) {
-        console.error('Failed to initialize Telegram SDK:', error);
-    }
-} else {
-    console.warn('App is not running inside Telegram. Skipping Telegram SDK initialization.');
-}
 
 // Eruda - Debugging
 import eruda from 'eruda';
@@ -44,5 +29,6 @@ app.use(PrimeVue, {
 
 app.use(createPinia());
 app.use(router);
+app.use(init());
 
 app.mount('#app');

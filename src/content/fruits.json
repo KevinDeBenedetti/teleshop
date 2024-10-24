@@ -1,0 +1,86 @@
+[
+    {
+        "id": "2000",
+        "code": "fru01",
+        "name": "Apple",
+        "description": "Fresh and juicy red apples",
+        "image": "apple.jpg",
+        "price": 1.5,
+        "category": "Fruits",
+        "quantity": 120,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4
+    },
+    {
+        "id": "2001",
+        "code": "fru02",
+        "name": "Banana",
+        "description": "Ripe yellow bananas",
+        "image": "banana.jpg",
+        "price": 0.9,
+        "category": "Fruits",
+        "quantity": 80,
+        "inventoryStatus": "INSTOCK",
+        "rating": 5
+    },
+    {
+        "id": "2002",
+        "code": "fru03",
+        "name": "Orange",
+        "description": "Citrus-rich oranges",
+        "image": "orange.jpg",
+        "price": 1.2,
+        "category": "Fruits",
+        "quantity": 50,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4
+    },
+    {
+        "id": "2003",
+        "code": "fru04",
+        "name": "Strawberry",
+        "description": "Sweet and fresh strawberries",
+        "image": "strawberry.jpg",
+        "price": 2.5,
+        "category": "Fruits",
+        "quantity": 30,
+        "inventoryStatus": "INSTOCK",
+        "rating": 5
+    },
+    {
+        "id": "2004",
+        "code": "fru05",
+        "name": "Grapes",
+        "description": "Fresh green grapes",
+        "image": "grapes.jpg",
+        "price": 3.0,
+        "category": "Fruits",
+        "quantity": 40,
+        "inventoryStatus": "LOWSTOCK",
+        "rating": 4
+    },
+    {
+        "id": "2005",
+        "code": "fru06",
+        "name": "Pineapple",
+        "description": "Tropical and juicy pineapples",
+        "image": "pineapple.jpg",
+        "price": 4.5,
+        "category": "Fruits",
+        "quantity": 20,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4
+    },
+    {
+        "id": "2006",
+        "code": "fru07",
+        "name": "Watermelon",
+        "description": "Fresh and juicy watermelons",
+        "image": "watermelon.jpg",
+        "price": 7.0,
+        "category": "Fruits",
+        "quantity": 15,
+        "inventoryStatus": "INSTOCK",
+        "rating": 5
+    }
+]
