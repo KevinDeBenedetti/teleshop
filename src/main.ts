@@ -12,11 +12,16 @@ import 'primeicons/primeicons.css';
 import { init } from '@telegram-apps/sdk-vue';
 // Verify Telegram environment is available
 function isTelegramEnvironment() {
-    return typeof window.Telegram !== 'undefined' && window.Telegram.WebApp;
+    return typeof window !== 'undefined' && window.Telegram !== undefined && window.Telegram.WebApp !== undefined;
 }
 // Init SDK only if it's a Telegram environment
 if (isTelegramEnvironment()) {
-    init();
+    try {
+        init();
+        console.log('Telegram SDK initialized');
+    } catch (error) {
+        console.error('Failed to initialize Telegram SDK:', error);
+    }
 } else {
     console.warn('App is not running inside Telegram. Skipping Telegram SDK initialization.');
 }
