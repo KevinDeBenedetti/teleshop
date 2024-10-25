@@ -113,7 +113,7 @@ const getSeverity = (product: IFruitState) => {
             return 'danger';
 
         default:
-            return null;
+            return undefined;
     }
 };
 </script>
@@ -121,7 +121,7 @@ const getSeverity = (product: IFruitState) => {
 <template>
   <h1 class="text-center text-green-600 text-2xl mb-8">Fruits</h1>
 
-  <DataView :value="products">
+  <DataView :value="products" dataKey="id">
       <template #list="slotProps">
           <div class="flex flex-col">
               <div v-for="(item, index) in slotProps.items" :key="index">
