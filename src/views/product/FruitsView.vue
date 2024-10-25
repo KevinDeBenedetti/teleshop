@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import type { IFruitState } from "@/types/FruitStoreState";
 
-const products = ref([
+const products = ref<IFruitState[]>([
 {
         "id": "2000",
         "code": "fru01",
@@ -100,7 +101,7 @@ onMounted(async () => {
 
 });
 
-const getSeverity = (product) => {
+const getSeverity = (product: IFruitState) => {
     switch (product.inventoryStatus) {
         case 'INSTOCK':
             return 'success';
