@@ -1,5 +1,7 @@
 # teleshop
 
+[Ouvrir la mini app Telegram](tg://resolve?domain=MonBot)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Type Support for `.vue` Imports in TS
