@@ -3,12 +3,12 @@ import { ref, onMounted } from "vue";
 import type { IFruitState } from "@/types/FruitStoreState";
 
 const products = ref<IFruitState[]>([
-{
+    {
         "id": "2000",
         "code": "fru01",
         "name": "Apple",
         "description": "Fresh and juicy red apples",
-        "image": "apple.jpg",
+        "image": "https://images.unsplash.com/photo-1724497302427-3942dbd14fb5?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "price": 1.5,
         "category": "Fruits",
         "quantity": 120,
@@ -20,7 +20,7 @@ const products = ref<IFruitState[]>([
         "code": "fru02",
         "name": "Banana",
         "description": "Ripe yellow bananas",
-        "image": "banana.jpg",
+        "image": "images/fruits/banana.jpg",
         "price": 0.9,
         "category": "Fruits",
         "quantity": 80,
@@ -91,9 +91,19 @@ const products = ref<IFruitState[]>([
 
 onMounted(async () => {
   try {
+    console.log(import.meta.env.VITE_BASE_URL + 'public/')
     const response = await fetch("/teleshop/content/fruits.json");
     const data = await response.json();
-    products.value = data
+
+        // Modifie chaque URL d'image dans les données reçues
+    const updatedData = data.map((product: IFruitState) => {
+      return {
+        ...product,
+        image: `${import.meta.env.VITE_BASE_URL}${product.image}`
+      };
+    });
+
+    products.value = updatedData
     console.log(products.value)
   } catch (error) {
     console.error("Error loading products:", error);
@@ -127,7 +137,7 @@ const getSeverity = (product: IFruitState) => {
               <div v-for="(item, index) in slotProps.items" :key="index">
                   <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4" :class="{ 'border-t border-surface-200 dark:border-surface-700': index !== 0 }">
                       <div class="md:w-40 relative">
-                          <img class="block xl:block mx-auto rounded w-full" :src="`https://primefaces.org/cdn/primevue/images/product/${item.image}`" :alt="item.name" />
+                          <img class="block xl:block mx-auto rounded w-full" :href="item.image" :alt="item.name" />
                           <div class="absolute bg-black/70 rounded-border" style="left: 4px; top: 4px">
                               <Tag :value="item.inventoryStatus" :severity="getSeverity(item)"></Tag>
                           </div>
