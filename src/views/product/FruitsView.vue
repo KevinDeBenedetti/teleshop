@@ -8,7 +8,7 @@ const products = ref<IFruitState[]>([
         "code": "fru01",
         "name": "Apple",
         "description": "Fresh and juicy red apples",
-        "image": "https://images.unsplash.com/photo-1724497302427-3942dbd14fb5?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "/images/fruits/apple.jpg",
         "price": 1.5,
         "category": "Fruits",
         "quantity": 120,
@@ -20,7 +20,7 @@ const products = ref<IFruitState[]>([
         "code": "fru02",
         "name": "Banana",
         "description": "Ripe yellow bananas",
-        "image": "images/fruits/banana.jpg",
+        "image": "/images/fruits/banana.jpg",
         "price": 0.9,
         "category": "Fruits",
         "quantity": 80,
@@ -32,7 +32,7 @@ const products = ref<IFruitState[]>([
         "code": "fru03",
         "name": "Orange",
         "description": "Citrus-rich oranges",
-        "image": "orange.jpg",
+        "image": "/images/fruits/orange.jpg",
         "price": 1.2,
         "category": "Fruits",
         "quantity": 50,
@@ -44,7 +44,7 @@ const products = ref<IFruitState[]>([
         "code": "fru04",
         "name": "Strawberry",
         "description": "Sweet and fresh strawberries",
-        "image": "strawberry.jpg",
+        "image": "/images/fruits/strawberry.jpg",
         "price": 2.5,
         "category": "Fruits",
         "quantity": 30,
@@ -56,7 +56,7 @@ const products = ref<IFruitState[]>([
         "code": "fru05",
         "name": "Grapes",
         "description": "Fresh green grapes",
-        "image": "grapes.jpg",
+        "image": "/images/fruits/grapes.jpg",
         "price": 3.0,
         "category": "Fruits",
         "quantity": 40,
@@ -68,7 +68,7 @@ const products = ref<IFruitState[]>([
         "code": "fru06",
         "name": "Pineapple",
         "description": "Tropical and juicy pineapples",
-        "image": "pineapple.jpg",
+        "image": "/images/fruits/pineapple.jpg",
         "price": 4.5,
         "category": "Fruits",
         "quantity": 20,
@@ -80,7 +80,7 @@ const products = ref<IFruitState[]>([
         "code": "fru07",
         "name": "Watermelon",
         "description": "Fresh and juicy watermelons",
-        "image": "watermelon.jpg",
+        "image": "/images/fruits/watermelon.jpg",
         "price": 7.0,
         "category": "Fruits",
         "quantity": 15,
@@ -137,7 +137,7 @@ const getSeverity = (product: IFruitState) => {
               <div v-for="(item, index) in slotProps.items" :key="index">
                   <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4" :class="{ 'border-t border-surface-200 dark:border-surface-700': index !== 0 }">
                       <div class="md:w-40 relative">
-                          <img class="block xl:block mx-auto rounded w-full" :href="item.image" :alt="item.name" />
+                          <img class="block xl:block mx-auto rounded w-full " :src="`/teleshop/${item.image}`" :alt="item.name" />
                           <div class="absolute bg-black/70 rounded-border" style="left: 4px; top: 4px">
                               <Tag :value="item.inventoryStatus" :severity="getSeverity(item)"></Tag>
                           </div>
