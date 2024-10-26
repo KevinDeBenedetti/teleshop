@@ -1,11 +1,6 @@
 # teleshop
 
-[Ouvrir la mini app Telegram teleshop](tg://resolve?domain=teleshop)
-
-[Ouvrir la mini app Telegram TeleShop](tg://resolve?domain=TeleShop)
-
-[Ouvrir la mini app Telegram TeleShopBoilerBot](tg://resolve?domain=TeleShopBoilerBot)
-
+[Ouvrir la mini app Telegram](https://t.me/TeleShopBoilerBot/TeleShop)
 
 This template should help get you started developing with Vue 3 in Vite.
 
