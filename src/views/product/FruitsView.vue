@@ -91,11 +91,11 @@ const products = ref<IFruitState[]>([
 
 onMounted(async () => {
   try {
-    console.log(import.meta.env.VITE_BASE_URL + 'public/')
+    // console.log(import.meta.env.VITE_BASE_URL + 'public/')
     const response = await fetch("/teleshop/content/fruits.json");
     const data = await response.json();
 
-        // Modifie chaque URL d'image dans les données reçues
+    // Modifie chaque URL d'image dans les données reçues
     const updatedData = data.map((product: IFruitState) => {
       return {
         ...product,
@@ -104,7 +104,7 @@ onMounted(async () => {
     });
 
     products.value = updatedData
-    console.log(products.value)
+    // console.log(products.value)
   } catch (error) {
     console.error("Error loading products:", error);
   }
